@@ -12,7 +12,7 @@ const App = () => {
 
   useEffect(() => {
     // Initialize socket connection
-    const newSocket = io('http://localhost:5000');
+    const newSocket = io('https://whiteboard-backend-s12x.onrender.com/');
     setSocket(newSocket);
 
     // Socket event listeners
