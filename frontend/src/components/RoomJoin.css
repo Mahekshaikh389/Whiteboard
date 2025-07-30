@@ -1,0 +1,152 @@
+.room-join {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.room-join-container {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.room-join-container h2 {
+  color: #333;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.room-form {
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.room-input {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.room-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.join-button, .create-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.join-button {
+  background-color: #667eea;
+  color: white;
+}
+
+.join-button:hover:not(:disabled) {
+  background-color: #5a6fd8;
+  transform: translateY(-1px);
+}
+
+.join-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.create-button {
+  background-color: #28a745;
+  color: white;
+  width: 100%;
+}
+
+.create-button:hover {
+  background-color: #218838;
+  transform: translateY(-1px);
+}
+
+.divider {
+  position: relative;
+  margin: 1.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #e1e5e9;
+}
+
+.divider span {
+  background-color: white;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.error-message {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  border-radius: 4px;
+}
+
+.instructions {
+  color: #666;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-top: 2rem;
+}
+
+.instructions p {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .room-join-container {
+    padding: 2rem;
+    margin: 1rem;
+  }
+
+  .room-join-container h2 {
+    font-size: 1.25rem;
+  }
+
+  .room-input, .join-button, .create-button {
+    font-size: 0.9rem;
+  }
+
+  .instructions {
+    font-size: 0.8rem;
+  }
+}
