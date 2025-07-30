@@ -250,7 +250,7 @@ io.on('connection', (socket) => {
     // Broadcast to other users
     socket.to(currentRoom).emit('draw-move', drawingData);
 
-    // Save to database (might want to throttle this for performance)
+    // Save to database 
     try {
       await Room.findOneAndUpdate(
         { roomId: currentRoom },
@@ -344,7 +344,7 @@ io.on('connection', (socket) => {
   });
 });
 
-// Clean up old rooms (run every hour)
+// Clean up old rooms 
 setInterval(async () => {
   try {
     const cutoffTime = new Date(Date.now() - 24 * 60 * 60 * 1000); // 24 hours ago
