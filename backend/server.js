@@ -9,7 +9,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: "https://whiteboard-ooyk.onrender.com/",
+    origin: "https://whiteboard-ooyk.onrender.com",
     methods: ["GET", "POST"]
   }
 });
@@ -359,7 +359,7 @@ setInterval(async () => {
   }
 }, 60 * 60 * 1000); // Run every hour
 
-const PORT = process.env.PORT || 5000 || "https://whiteboard-backend-s12x.onrender.com/";
+const PORT = process.env.PORT || 5000 ;
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
