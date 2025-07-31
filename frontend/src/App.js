@@ -12,7 +12,9 @@ const App = () => {
 
   useEffect(() => {
     // Initialize socket connection
-    const newSocket = io('https://whiteboard-backend-s12x.onrender.com/');
+    const newSocket = io('https://whiteboard-backend-s12x.onrender.com', {
+      transports: ["websocket"]
+    } );
     setSocket(newSocket);
 
     // Socket event listeners
