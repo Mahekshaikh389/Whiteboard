@@ -40,6 +40,14 @@ const RoomJoin = ({ onJoinRoom }) => {
 
   return (
     <div className="room-join">
+      <video
+    className="background-video"
+    src="/collabrative-whiteborld-video.mp4"
+    autoPlay
+    loop
+    muted
+  ></video>
+
       <div className="room-join-container">
         <h2>Join a Whiteboard Room</h2>
         
